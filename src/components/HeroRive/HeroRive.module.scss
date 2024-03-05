@@ -1,0 +1,31 @@
+@import '../../styles/utils/breakpoints';
+
+.rive_container {
+    width: 50%;
+    height: 100rem;
+    position: absolute;
+    right: 6.5rem;
+    top: -15rem;
+
+    @include media('<=phone') {
+        width: 60rem;
+        height: 80rem;
+        right: 0;
+        top: 30rem;
+        z-index: -1;
+    }
+}
+
+.rive_animation {
+    width: 110rem;
+    height: 110rem;
+    position: absolute;
+    right: -18.5rem;
+    top: 0;
+
+    @include media('<=phone') {
+        width: 60rem;
+        height: 80rem;
+        right: 0;
+    }
+}

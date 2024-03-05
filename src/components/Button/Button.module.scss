@@ -1,0 +1,17 @@
+@import '../../styles/utils/breakpoints';
+@import '../../styles/utils/variables';
+
+.primary_button {
+    padding: 1.2rem 1.5rem;
+    border: 1px solid #565252;
+    border-radius: 15px;
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+    transition: filter 0.2s var(--ease-in-expo);
+
+    @include media('<=phone') {
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,99 @@
+@import '../../styles/utils/functions.scss';
+@import '../../styles/utils/variables.scss';
+
+.features {
+    all: unset;
+    padding-top: 9rem;
+
+    width: 100%;
+}
+
+.features__row {
+    display: flex;
+    justify-content: space-around;
+    aspect-ratio: 1 / 1;
+    width: mobile-vw(343px);
+
+    @include desktop {
+        width: 100vw;
+        height: 100vh;
+        padding-left: desktop-vw(100px);
+        padding-right: desktop-vw(20px);
+
+        &:first-child {
+            // margin-left: var(--layout-margin);
+            // margin-left: 100vw;
+            // margin-left: calc((var(--layout-columns-gap) * 4) + columns(5));
+            margin-left: desktop-vw(1000px)
+        }
+
+        &:not(:last-child) {
+            margin-right: desktop-vw(20px);
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &:nth-child(2) {
+        .features__content {
+            .features__content__title {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    &:last-child {
+        .features__content {
+            margin-left: 5.5rem;
+            .features__content__title {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.features__content {
+    padding-top: 9rem;
+}
+
+
+.features__content__title {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2.3rem;
+}
+
+
+.features__imagery {
+    overflow: hidden;
+    position: relative;
+    border: 2px solid $color-alien-armpit;
+    border-radius: 50px;
+    filter: drop-shadow(0 0 5px rgba(117, 228, 27, 0.86)) drop-shadow(0 0 30px rgba(117, 228, 27, 0.752)) drop-shadow(0 0 50px rgba(117, 228, 27, 0.83));
+    align-self: center;
+
+    @include desktop {
+        width: 120rem;
+        height: 80rem;
+        opacity: .5;
+    }
+
+    &>* {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: scale(1.4);
+    }
+}
+
+.features__content__description {
+    font-size: 2.5rem;
+    width: 42.6rem;
+}

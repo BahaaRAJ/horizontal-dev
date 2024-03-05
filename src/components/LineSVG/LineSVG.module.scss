@@ -1,0 +1,52 @@
+@import '../../styles/utils/breakpoints';
+
+.line__wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    pointer-events: none;
+}
+
+.line__set {
+    height: 95vw;
+    position: absolute;
+    width: 1px;
+    top: calc(-48vw + 10px);
+    left: calc(50% - 2px);
+    transform: rotate(-90deg);
+    z-index: -1;
+
+    @include media('<=phone') {
+        top: -30vw;
+    }
+
+    &::before {
+        top: -10px;
+        content: '';
+        position: absolute;
+        right: 2px;
+        bottom: -10px;
+        left: -70px;
+    }
+}
+
+.line {
+    top: 0;
+    right: 60px;
+    transform: translateX(calc(100% + 60px));
+    height: 100%;
+    width: 60px;
+    position: absolute;
+    max-width: unset;
+}
+
+.line__path {
+    height: 100%;
+    fill: none;
+    stroke: rgba(117, 228, 27, 0.628);
+    stroke-width: 2px;
+    opacity: 1;
+    transform: translateX(-60px);
+}

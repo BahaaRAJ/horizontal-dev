@@ -1,0 +1,116 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/breakpoints';
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 20rem;
+}
+
+.hero__title {
+    line-height: 1;
+    margin-bottom: 10rem;
+
+    @include media('<=phone') {
+        display: flex;
+        flex-direction: column;
+        font-size: 4rem;
+        margin-bottom: 10rem;
+    }
+}
+
+.hero__first__title__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include media('<=phone') {
+        width: 100%;
+        flex-direction: column;
+        height: 12rem;
+    }
+}
+
+.hero__first__title {
+    width: 17%;
+
+    @include media('<=phone') {
+        width: 100%;
+    }
+}
+
+.hero__titles__list {
+    position: relative;
+    font-weight: 500;
+    width: 83%;
+
+    @include media('<=phone') {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hero__list__title {
+    color: $color-alien-armpit;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero__second__title {
+    @include media('<=phone') {
+        font-size: 3.5rem;
+    }
+}
+
+.hero__content__wrapper {
+    width: 100%;
+    height: 80rem;
+    position: relative;
+    display: flex;
+}
+
+.hero__content {
+    width: 50%;
+
+    @include media('<=phone') {
+        width: 100%;
+    }
+}
+
+.hero__description {
+    width: 83.3rem;
+    margin-bottom: 8.8rem;
+    font-weight: 500;
+
+    @include media('<=phone') {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 4rem;
+
+    @include media('<=phone') {
+        justify-content: center;
+    }
+}
+
+.install__button {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background-color: $color-alien-armpit;
+        border-color: $color-black;
+        color: $color-black;
+    }
+}
+
+.install__button__text {
+    font-weight: 600;
+}

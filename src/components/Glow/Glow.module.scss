@@ -1,0 +1,12 @@
+@import '../../styles/utils/variables';
+
+.glow {
+    color: $color-alien-armpit;
+    font-weight: 500;
+    filter: drop-shadow(0 0 5px rgba(117, 228, 27, 0.86)) drop-shadow(0 0 30px rgba(117, 228, 27, 0.752)) drop-shadow(0 0 50px rgba(117, 228, 27, 0.83));
+}
+
+.greenColor {
+    color: $color-alien-armpit;
+    font-weight: 500;
+}
